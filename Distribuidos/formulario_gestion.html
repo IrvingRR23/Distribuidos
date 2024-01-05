@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* Estilos del botón neon */
+        .neon{
+          position: relative;
+          display: inline-block;
+          padding: 15px 30px;
+          color: black;
+          letter-spacing: 4px;
+          font-size: 15px;
+          text-align: none;
+          overflow: hidden;
+          transition: 0.2s;
+        }
+    
+        .neon:hover{
+          background: blue;
+          box-shadow: 0 0 10px blue, 0 0 40px blue, 0 0 80px blue;
+          transition-delay: 0.3s;
+        } 
+    
+        .neon span{
+          position: absolute;
+          display: block;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SARPA</title>
+    <link rel="icon" href="./assets/img/Logo.png">
+    <link rel="stylesheet" href="./css/formularios.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Acerca de</a>
+        <a href="#">Servicios</a>
+        <a href="#">Contacto</a>
+    </nav>
+
+    <div class="container">
+        <img class="logo" src="./assets/img/SARPA.png" alt="logo-sarpa">
+    </div>
+
+    <main>
+        <!-- Contenedor de formularios -->
+        <div class="contenedor__todo">
+            <div class="caja__trasera">
+                <!-- Botones para alternar entre Iniciar Sesión y Registrarse -->
+                <div class="caja__trasera-login">
+                    <h3>¿Ya tienes una cuenta?</h3>
+                    <p>Inicia sesión para entrar en la página</p>
+                    <button id="btn__iniciar-sesion">Iniciar Sesión</button>
+                </div>
+                <div class="caja__trasera-register">
+                    <h3>¿Aún no tienes una cuenta?</h3>
+                    <p>Regístrate para que puedas iniciar sesión</p>
+                    <button id="btn__registrarse">Regístrarse</button>
+                </div>
+            </div>
+            <!-- Formulario de Login y Registro -->
+            <div class="contenedor__login-register">
+                <!-- Formulario de Iniciar Sesión -->
+                <form class="formulario__login" action="./CRUD/Verificar_gestion.php" method="POST">
+                    <h2>Iniciar Sesión Gestión</h2>
+                    <input type="text" name="correo" placeholder="Correo Electronico">
+                    <input type="password" name="pass" placeholder="Contraseña">
+                    <button name="btnlogin" type="submit">Entrar</button>
+                </form>
+
+                <!-- Formulario de Registro -->
+                <form class="formulario__register" action="./php/gestion.php" method="POST" enctype="multipart/form-data">
+                    <h2>Regístrarse</h2>
+                    <input type="text" placeholder="Nombre" name="nombre">
+                    <input type="text" placeholder="Apellido Paterno" name="paterno">
+                    <input type="text" placeholder="Apellido Materno" name="materno">
+                    <input type="text" placeholder="Correo Electronico" name="email">
+                    <input type="password" placeholder="Contraseña" name="pass">
+                    <input class="input-group" type="file" name="img" id="img">
+                    <button type="submit">Regístrarse</button>
+                </form>
+            </div>
+        </div>
+        <br><br>
+        <!-- Enlace neon -->
+        <a class="neon" href="./formulario.html">¿Eres Alumno?</a>
+    </main>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>

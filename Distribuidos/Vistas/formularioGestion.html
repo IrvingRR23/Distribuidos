@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SARPA</title>
+	<link rel="stylesheet" href="../css/formularios.css">
+</head>
+<body>
+	<!-- HTML5 -->
+	<nav>
+		<a href="#">Inicio</a>
+		<a href="#">Acerca de</a>
+		<a href="#">Servicios</a>
+		<a href="#">Contacto</a>
+	</nav>
+
+	<div class="container">
+		<img class="logo" src="../assets/img/SARPA.png" alt="logo-sarpa">
+	</div>
+
+	<form class="form" action="../php/gestion.php" method="POST" enctype="multipart/form-data">
+	<h2>Registro de docente</h2>
+		<div class="wrapper">
+            <i class="fa fa-user"></i>
+            <input type="text" class="input-group" id="nombre" name="nombre" placeholder="Nombre (requerido)"></div>
+		<div class="wrapper">
+			<i class="fa fa-firstln"></i>
+			<input class="input-group" id="paterno" type="text" name="paterno" placeholder="Apellido Paterno (requerido)"></div>
+		<div class="wrapper">
+			<i class="fa fa-secondln"></i>
+			<input class="input-group" id="materno" type="text" name="materno" placeholder="Apellido Materno (requerido)"></div>
+		<div class="wrapper">
+            <i class="fa fa-envelope-o"></i>
+			<input class="input-group" id="email" type="email" name='email' placeholder="E-Mail (requerido)"></div>		
+		<div class="wrapper">
+			<i class="fa fa-file-text-o"></i>
+			<input class="input-group" id="pass" type="password" name='pass' placeholder="Password"></div>
+		<div class="wrapper">
+			<label for="photo">Foto de Perfil</label>
+			<input class="input-group" type="file" name="img" id="img">
+		</div>		
+		<button type="submit" class="send-btn">Enviar</button>
+	</form>	
+</body>
+</html>
+
+
+

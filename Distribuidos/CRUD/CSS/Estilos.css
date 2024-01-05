@@ -1,0 +1,283 @@
+:root{
+    --col: #e50909;
+    --Fondo: #040708; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--Fondo);
+    font-family: 'Open Sans', sans-serif;
+}
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+}
+
+header{
+    padding: 30px 0;
+}
+
+header .contenedor{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .LogoT{
+    font-family: 'Bebas Neue', cursive;
+    font-weight: normal;
+    color: var(--col);
+    font-size: 40px;
+    text-align: left;
+}
+
+header nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+header nav a:hover,
+header nav a.activo{
+    color: #E50914;
+}
+/*Tabla*/
+table{
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td{
+    border: solid 1px black;
+    padding: 20px;
+}
+
+thead{
+    background-color: #246355;
+    border-bottom: solid 5px #0F362D;
+    color: white;
+}
+
+tr:nth-child(even){
+    background-color: #ddd;
+}
+
+tr:hover {
+    background-color: #369681;
+}
+
+.neon{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: black;
+    letter-spacing: 4px;
+    font-size: 15px;
+    text-align: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.neonE{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color: black;
+    letter-spacing: 4px;
+    font-size: 15px;
+    text-align: none;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.neon:hover{
+    background: blue;
+    box-shadow: 0 0 10px blue, 0 0 40px blue, 0 0 80px blue;
+    transition-delay: 0.3s;
+}
+
+.neonE:hover{
+    background: red;
+    box-shadow: 0 0 10px red, 0 0 40px red, 0 0 80px red;
+    transition-delay: 0.3s;
+}
+
+.neon span{
+    position: absolute;
+    display: block;
+}
+
+.neonE span{
+    position: absolute;
+    display: block;
+}
+
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,trasparent,blue);
+}
+
+.neon:hover #span1{
+    left: 100%;
+    transition: 0.3s;
+}
+
+.neonE:hover #span1{
+    left: 100%;
+    transition: 0.3s;
+}
+/*Actualizar*/
+.form-update{
+    width: 400px;
+    background: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 4px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 7px 13px 37px #000;
+}
+
+.form-update h4{
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.controls{
+    width: 100%;
+    background: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'calibri';
+    font-size: 18px;
+    color: white;
+}
+
+.form-update .botons{
+    width: 100%;
+    background: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+}
+
+
+
+/*Principal*/
+.principal{
+    font-size: 16px;
+    min-height: 40.62em;
+    color: #fff;
+    background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(../../assets/img/fondo.avif);
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 3.12em;
+    display: flex;
+    align-items: end;
+}
+
+.principal .contenedor{
+    margin: 0 auto;
+    margin-bottom: 6.25em;
+}
+
+.principal .titulo{
+    font-weight: 600;
+    font-size: 3.12em;
+    margin-bottom: 0.4em;
+}
+
+.principal .descrip{
+    font-weight: normal;
+    font-size: 1em;
+    line-height: 28px;
+    max-width: 50%;
+    margin-bottom: 1.25em;
+}
+
+.principal .boton{
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 0.31em;
+    padding: 0.93em 1.87em;
+    color: #fff;
+    margin-right: 1.25em;
+    cursor: pointer;
+    transition: .3s ease all;
+    font-size: 1.12em;
+}
+
+.principal .boton:hover{
+    background: #fff;
+    color: #000;
+}
+
+.principal .boton i {
+    margin-right: 1.25em;
+}
+
+@media screen and (max-width: 800px){
+    header .LogoT{
+        margin-bottom: 10px;
+        font-size: 30px;
+    }
+
+    header .contenedor {
+		flex-direction: column;
+		text-align: center;
+	}
+
+    .principal {
+		font-size: 14px;
+	}
+
+    .principal .descrip{
+        max-width: 100%;
+    }
+}
+
+.imglogo{
+
+    width: 20rem;
+    margin: 0;
+    padding: 0;
+}
+
+input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none; /*Eliminar bordes*/
+    background: #f2f2f2;
+    font-size: 16px;
+    outline: none; /*Opcional - quita lineas de seleccion*/
+}
+
+button{
+    padding: 10px 40px; /*Alto de 10px y 40px de separacion a los lados*/
+    margin-top: 40px;
+    border: none;
+    font-size: 14px;
+    background: black;
+    color: white;
+    cursor: pointer;
+    outline: none;  /*Quita lineas de seleccion*/
+    border-radius: 10px; /*Bordes redondos*/
+}
